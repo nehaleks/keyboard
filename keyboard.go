@@ -1,3 +1,4 @@
+// Пакет keyboard предназначен для получения вводных данных с клавиатуры от пользователя
 package keyboard
 
 import (
@@ -7,6 +8,8 @@ import (
 	"strings"
 )
 
+// GetFloat читает данные в формате float64
+// В случае ошибки вернет 0
 func GetFloat() (float64, error) {
 	reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
